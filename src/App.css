@@ -18,4 +18,22 @@ main {
   justify-content: space-between;
   background-color: aliceblue;
   border: 1px black solid;
+  user-select: none;
+}
+
+.strike-thru {
+  text-decoration: line-through;
+}
+
+.icon-delete {
+
+}
+
+
+.icon-container:hover .icon-complete{
+  display: none;
+}
+
+.icon-container:hover .icon-delete::before {
+  content: '🗑️'
 }

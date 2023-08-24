@@ -10,10 +10,11 @@ const AddTodo = (props) => {
 
   return (
     <form>
-      <input type='text' onChange={handleChange} />
+      <input type='text' value={newTodo.name} onChange={handleChange} />
       <button
         onClick={() => {
           props.handleAddTodo(newTodo);
+          setNewTodo({ name: '', complete: false });
         }}
         type='button'
       >
