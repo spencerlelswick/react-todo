@@ -1,12 +1,7 @@
 import React, { useState } from 'react';
 
-const AddTodo = ({ todos, setTodos }) => {
+const AddTodo = (props) => {
   const [newTodo, setNewTodo] = useState({ name: '', complete: false });
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    setTodos([...todos, newTodo]);
-  };
 
   const handleChange = (e) => {
     const newTodoName = e.target.value;
@@ -14,9 +9,16 @@ const AddTodo = ({ todos, setTodos }) => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form>
       <input type='text' onChange={handleChange} />
-      <button type='submit'>Add</button>
+      <button
+        onClick={() => {
+          props.handleAddTodo(newTodo);
+        }}
+        type='button'
+      >
+        Add
+      </button>
     </form>
   );
 };

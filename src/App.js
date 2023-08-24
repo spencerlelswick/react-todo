@@ -11,14 +11,21 @@ function App() {
     {name:'cook dinner', complete: false},
   ])
 
+  
+  const handleAddTodo = (newTodo) => {
+    console.log(newTodo)
+    console.log("handle AddTodo")
+    setTodos([...todos, newTodo]);
+  };
+
   return (
     <div className="App">
       <main>
         <h1>React Todo App</h1>
-        {todos.map((todo) => <Todo todo={todo} setTodos={setTodos}  todos={todos}/>)}
+        {todos.map((todo) => <Todo todo={todo} setTodos={setTodos}  todos={todos} />)}
       </main>
       <section>
-        <AddTodo setTodos={setTodos} todos={todos} />
+        <AddTodo handleAddTodo={handleAddTodo} />
       </section>
 
     </div>
