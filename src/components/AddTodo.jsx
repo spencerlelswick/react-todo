@@ -10,7 +10,7 @@ const AddTodo = ({ todos, setTodos }) => {
 
   const handleChange = (e) => {
     const newTodoName = e.target.value;
-    setNewTodo({ name: newTodoName, complete: true });
+    setNewTodo({ name: newTodoName, complete: false });
   };
 
   return (

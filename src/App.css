@@ -11,12 +11,11 @@ h1 {
 }
 
 main {
-  width: 100%;
 }
 
 .todo-item {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   background-color: aliceblue;
   border: 1px black solid;
 }

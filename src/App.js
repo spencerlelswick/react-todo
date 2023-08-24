@@ -15,7 +15,7 @@ function App() {
     <div className="App">
       <main>
         <h1>React Todo App</h1>
-        {todos.map((todo) => <Todo todo={todo} />)}
+        {todos.map((todo) => <Todo todo={todo} setTodos={setTodos}  todos={todos}/>)}
       </main>
       <section>
         <AddTodo setTodos={setTodos} todos={todos} />
