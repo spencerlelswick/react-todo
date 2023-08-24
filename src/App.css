@@ -1,0 +1,8 @@
+
+
+.todo-item {
+  display: flex;
+  justify-content: space-around;
+  background-color: aliceblue;
+  border: 1px black solid;
+}
