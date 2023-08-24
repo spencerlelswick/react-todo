@@ -1,4 +1,18 @@
+.App {
+  margin: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 
+h1 {
+  text-align: center;
+}
+
+main {
+  width: 100%;
+}
 
 .todo-item {
   display: flex;

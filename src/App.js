@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import './App.css';
 import Todo from './components/Todo';
-import newTodo from './components/newTodo';
+import AddTodo from './components/AddTodo';
 
 function App() {
 
@@ -14,10 +14,11 @@ function App() {
   return (
     <div className="App">
       <main>
+        <h1>React Todo App</h1>
         {todos.map((todo) => <Todo todo={todo} />)}
       </main>
       <section>
-        <newTodo />
+        <AddTodo setTodos={setTodos} todos={todos} />
       </section>
 
     </div>
