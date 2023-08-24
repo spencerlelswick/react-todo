@@ -4,7 +4,6 @@ const Todo = (props) => {
   const { name, complete } = props.todo;
 
   const deleteTodo = (todo) => {
-    console.log(`Deleting ${todo}`);
     const idx = props.todos.findIndex((t) => t.name === todo.name);
     const updTodo = [...props.todos];
     updTodo.splice(idx, 1);
@@ -12,9 +11,7 @@ const Todo = (props) => {
   };
 
   const handleClick = (e, todo) => {
-    console.log(e);
     if (e.target.className === 'icon-delete') return deleteTodo(todo);
-    console.log('NOT DELETING');
     const updatedTodo = { ...todo, complete: !todo.complete };
     const idx = props.todos.findIndex((t) => t.name === todo.name);
     const updTodo = [...props.todos];

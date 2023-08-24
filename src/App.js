@@ -13,8 +13,6 @@ function App() {
 
   
   const handleAddTodo = (newTodo) => {
-    console.log(newTodo)
-    console.log("handle AddTodo")
     setTodos([...todos, newTodo]);
   };
 
